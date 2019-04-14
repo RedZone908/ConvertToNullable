@@ -2,7 +2,7 @@
 
 namespace ConvertToNullable.Util
 {
-    public static class Helper
+    public static class NullableHelper
     {
         /// <summary>
         /// Converts an object of unknown struct type to a nullable
@@ -16,7 +16,7 @@ namespace ConvertToNullable.Util
         /// Take note--if an "int?" is desired, the type parameter should
         /// actually be "int" without the question mark.</typeparam>
         /// <param name="value">The value to be converted to a nullable type</param>
-        /// <returns></returns>
+        /// <returns>The inputted value, converted to the desired nullable type.</returns>
         public static T? ConvertToNullable<T>(object value) where T : struct
         {
             T? converted;
