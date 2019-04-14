@@ -7,6 +7,7 @@
     <PackageProjectUrl>https://github.com/RedZone908/ConvertToNullable</PackageProjectUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/RedZone908/ConvertToNullable</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
