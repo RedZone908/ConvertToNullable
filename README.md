@@ -15,7 +15,7 @@ long? d = NullableHelper.ConvertToNullable<long>(a);
 
 For the story on why this very niche method came to be created, see below!
 
-# ...Why? Just, why?!
+## ...Why? Just, why?!
 
 In C#, when dealing with a non-nullable integer that is referenced as a plain object, converting it to a nullable integer of a different type becomes needlessly difficult.
 
@@ -38,6 +38,6 @@ Whatever incompatibility exists between different-typed nullables is apparently 
 I had a need in my project to dynamically convert a set of heterogeneous integer inputs into nullable 64-bit integers. In this project I was forced to receive those integers as objects, thus I could not rely on the compiler's ihelp. Moreover, I could not know beforehand whether the inputted integers were 32- or 64-bit, nor could I know whether they were already nullable or not. So, I whipped up a quick, simple method to accomplish the task.
 
 
-# How does it work?
+## How does it work?
 
 Under the hood, the method essentially works by first attempting to cast the inputted object to the desired nullable type directly and, if that fails, it instead converts the input to the non-nullable version of the desired type and then converts that intermediate value into the desired nullable version of that type. With these two different behaviors, the method can produce the same output from either already-nullable objects or non-nullable objects. (But if you supply a non-struct object as input, e.g. a string, the method will of course fail)
