@@ -5,7 +5,15 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A simple static C# method that allows you to convert any primitive value to a nullable value of any other primitive type (provided the two types are compatible). Useful only for the very niche case where you are forced to produce nullable primitives from other primitives whose nullability and bit-ness you don't already know (e.g. you are sent a non-nullable "int" wrapped in a plain object reference and need to convert it to a nullable "long".</Description>
     <PackageProjectUrl>https://github.com/RedZone908/ConvertToNullable</PackageProjectUrl>
-    <PackageLicenseExpression>MIT License</PackageLicenseExpression>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
