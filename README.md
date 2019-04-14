@@ -8,7 +8,7 @@ For example, perhaps you are receiving both nullable and non-nullable 32-bit int
 
 Usage is like so:
 
-```
+```csharp
 object a = 5;
 long? d = NullableHelper.ConvertToNullable<long>(a);
 ```
@@ -19,7 +19,7 @@ For the story on why this very niche method came to be created, see below!
 
 In C#, when dealing with a non-nullable integer that is referenced as a plain object, converting it to a nullable integer of a different type becomes needlessly difficult.
 
-```
+```csharp
 object a = 5;       //Becomes an int under the hood
 int? b = (int?)a;   //Works
 long? c = (long?)b; //Works
@@ -28,7 +28,7 @@ long? d = (long?)a; //Doesn't work, invalid cast exception.
 
 Why the last line doesn't work is strange, especially given that it works when strongly typed:
 
-```
+```csharp
 int a = 5;
 long? d = (long?) a; //Works
 ```
