@@ -1,6 +1,6 @@
 # ConvertToNullable
 
-A simple static C# method that allows you to convert any primitive value to a nullable value of any other primitive type (provided the two types are compatible). This works whether the input primitive is non-nullable or nullable.
+A simple static C# method that allows you to convert any primitive value to a nullable value of any other primitive type (provided the two types are compatible). This works whether the input primitive is *non-nullable* or nullable.
 
 **The use-case for this method is, of course, extremely niche**. It's only needed in cases where you are forced to receive numeric primitives via plain object references and then must convert them to a nullable numeric primitive without knowing beforehand the bit-ness or nullability of the values you are receiving. 
 
