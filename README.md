@@ -35,7 +35,7 @@ long? d = (long?) a; //Works
 
 Whatever incompatibility exists between different-typed nullables is apparently resolved by the compiler when the types of both variables are known beforehand, but it doesn't work when the input variable is referenced as an object. Even when the input variable is an object, it only takes one extra cast to get the desired result, but what if you are working in a very type-agnostic environment for some reason?
 
-I had a need in my project to dynamically convert a set of heterogeneous integer inputs into nullable 64-bit integers. In this project I was forced to receive those integers as objects, thus I could not rely on the compiler's ihelp. Moreover, I could not know beforehand whether the inputted integers were 32- or 64-bit, nor could I know whether they were already nullable or not. So, I whipped up a quick, simple method to accomplish the task.
+I had a need in my project to dynamically convert a set of heterogeneous integer inputs into nullable 64-bit integers. In this project I was forced to receive those integers as objects, thus I could not rely on the compiler's help. Moreover, I could not know beforehand whether the inputted integers were 32- or 64-bit, nor could I know whether they were already nullable or not. So, I whipped up a quick, simple method to accomplish the task.
 
 
 ## How does it work?
